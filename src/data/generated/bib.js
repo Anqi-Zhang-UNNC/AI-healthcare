@@ -1,0 +1,121 @@
+﻿const generatedBibEntries = {
+    " Nichol2022GLIDE": {
+        "abstract": "Diffusion models have recently been shown to generate high-quality synthetic images, especially when paired with a guidance technique to trade off diversity for fidelity. We explore diffusion models for the problem of text-conditional image synthesis and compare two different guidance strategies: CLIP guidance and classifier-free guidance. We find that the latter is preferred by human evaluators for both photorealism and caption similarity, and often produces photorealistic samples. Samples from a 3.5 billion parameter text-conditional diffusion model using classifier-free guidance are favored by human evaluators to those from DALL-E, even when the latter uses expensive CLIP reranking. Additionally, we find that our models can be fine-tuned to perform image inpainting, enabling powerful text-driven image editing. We train a smaller model on a filtered dataset and release the code and weights at https://github.com/openai/glide-text2im.",
+        "author": "Nichol, Alex and Dhariwal, Prafulla and Ramesh, Aditya and Shyam, Pranav and Mishkin, Pamela and McGrew, Bob and Sutskever, Ilya and Chen, Mark",
+        "doi": "arXiv:2112.10741v3",
+        "journal": "arXiv preprint arXiv:2112.10741v3",
+        "keywords": "type:model, image_generation, diffusion_models, text-conditional_generation, classifier-free_guidance",
+        "publisher": "arXiv",
+        "title": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2112.10741v3.pdf",
+        "year": "2022"
+    },
+    "BarTal2023MultiDiffusion": {
+        "abstract": "Recent advances in text-to-image generation with diffusion models present transformative capabilities in image quality. However, user controllability of the generated image, and fast adaptation to new tasks still remains an open challenge, currently mostly addressed by costly and long retraining and fine-tuning or ad-hoc adaptations to specific image generation tasks. In this work, we present MultiDiffusion, a unified framework that enables versatile and controllable image generation, using a pre-trained text-to-image diffusion model, without any further training or finetuning. At the center of our approach is a new generation process, based on an optimization task that binds together multiple diffusion generation processes with a shared set of parameters or constraints. We show that MultiDiffusion can be readily applied to generate high quality and diverse images that adhere to user-provided controls, such as desired aspect ratio (e.g., panorama), and spatial guiding signals, ranging from tight segmentation masks to bounding boxes.",
+        "author": "Bar-Tal, Omer and Yariv, Lior and Lipman, Yaron and Dekel, Tali",
+        "doi": "arXiv:2302.08113v1",
+        "journal": "arXiv preprint arXiv:2302.08113v1",
+        "keywords": "type:framework, image_generation, diffusion_models, controllable_generation, text-to-image",
+        "publisher": "arXiv",
+        "title": "MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2302.08113v1.pdf",
+        "year": "2023"
+    },
+    "Ding2024Enhance": {
+        "abstract": "This paper presents a novel approach to enhance image-to-image generation by leveraging the multimodal capabilities of the Large Language and Vision Assistant (LLaVA). We propose a framework where LLaVA analyzes input images and generates textual descriptions, hereinafter LLaVA-generated prompts. These prompts, along with the original image, are fed into the image-to-image generation pipeline. This enriched representation guides the generation process towards outputs that exhibit a stronger resemblance to the input image. Extensive experiments demonstrate the effectiveness of LLaVA-generated prompts in promoting image similarity. We observe a significant improvement in the visual coherence between the generated and input images compared to traditional methods. Future work will explore fine-tuning LLaVA prompts for increased control over the creative process. By providing more specific details within the prompts, we aim to achieve a delicate balance between faithfulness to the original image and artistic expression in the generated outputs.",
+        "author": "Ding, Zhicheng and Li, Panfeng and Yang, Qikai and Li, Siyang",
+        "doi": "arXiv:2406.01956v3",
+        "journal": "arXiv preprint arXiv:2406.01956v3",
+        "keywords": "type:framework, image-to-image_generation, large_language_model, multimodal, LLaVA",
+        "publisher": "arXiv",
+        "title": "Enhance Image-to-Image Generation with LLaVA-generated Prompts",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2406.01956v3.pdf",
+        "year": "2024"
+    },
+    "Gal2022An": {
+        "abstract": "Text-to-image models offer unprecedented freedom to guide creation through natural language. Yet, it is unclear how such freedom can be exercised to generate images of specific unique concepts, modify their appearance, or compose them in new roles and novel scenes. In other words, we ask: how can we use language-guided models to turn our cat into a painting, or imagine a new product based on our favorite toy? Here we present a simple approach that allows such creative freedom. Using only 3-5 images of a user-provided concept, like an object or a style, we learn to represent it through new \u201cwords\u201d in the embedding space of a frozen text-to-image model. These \u201cwords\u201d can be composed into natural language sentences, guiding personalized creation in an intuitive way. Notably, we find evidence that a single word embedding is sufficient for capturing unique and varied concepts. We compare our approach to a wide range of baselines, and demonstrate that it can more faithfully portray the concepts across a range of applications and tasks. Our code, data and new words will be available at: https://textual-inversion.github.io",
+        "author": "Gal, Rinon and Alaluf, Yuval and Atzmon, Yuval and Patashnik, Or and Bermano, Amit H. and Chechik, Gal and Cohen-Or, Daniel",
+        "doi": "arXiv:2208.01618v1",
+        "journal": "arXiv preprint arXiv:2208.01618v1",
+        "keywords": "type:approach, text-to-image_generation, personalized_generation, textual_inversion",
+        "publisher": "arXiv",
+        "title": "An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2208.01618v1.pdf",
+        "year": "2022"
+    },
+    "Ju2023HumanSD": {
+        "abstract": "Controllable human image generation (HIG) has numerous real-life applications. State-of-the-art solutions, such as ControlNet and T2I-Adapter, introduce an additional learnable branch on top of the frozen pre-trained stable diffusion (SD) model, which can enforce various conditions, including skeleton guidance of HIG. While such a plug-and-play approach is appealing, the inevitable and uncertain conflicts between the original images produced from the frozen SD branch and the given condition incur significant challenges for the learnable branch, which essentially conducts image feature editing for condition enforcement. In this work, we propose a native skeleton-guided diffusion model for controllable HIG called HumanSD. Instead of performing image editing with dual-branch diffusion, we fine-tune the original SD model using a novel heatmap-guided denoising loss. This strategy effectively and efficiently strengthens the given skeleton condition during model training while mitigating the catastrophic forgetting effects. HumanSD is fine-tuned on the assembly of three large-scale human-centric datasets with text-image-pose information, two of which are established in this work. As shown in Figure 1, HumanSD outperforms ControlNet in terms of accurate pose control and image quality, particularly when the given skeleton guidance is sophisticated.",
+        "author": "Ju, Xuan and Zeng, Ailing and Zhao, Chenchen and Wang, Jianan and Zhang, Lei and Xu, Qiang",
+        "doi": "arXiv:2304.04269v1",
+        "journal": "arXiv preprint arXiv:2304.04269v1",
+        "keywords": "type:model, human_image_generation, diffusion_models, pose_control, heatmap-guided_denoising_loss",
+        "publisher": "arXiv",
+        "title": "HumanSD: A Native Skeleton-Guided Diffusion Model for Human Image Generation",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2304.04269v1.pdf",
+        "year": "2023"
+    },
+    "Ramesh2021ZeroShot": {
+        "abstract": "Text-to-image generation has traditionally focused on finding better modeling assumptions for training on a fixed dataset. These assumptions might involve complex architectures, auxiliary losses, or side information such as object part labels or segmentation masks supplied during training. We describe a simple approach for this task based on a transformer that autoregressively models the text and image tokens as a single stream of data. With sufficient data and scale, our approach is competitive with previous domain-specific models when evaluated in a zero-shot fashion.",
+        "author": "Ramesh, Aditya and Pavlov, Mikhail and Goh, Gabriel and Gray, Scott and Voss, Chelsea and Radford, Alec and Chen, Mark and Sutskever, Ilya",
+        "doi": "arXiv:2102.12092v2",
+        "journal": "arXiv preprint arXiv:2102.12092v2",
+        "keywords": "type:approach, text-to-image_generation, autoregressive_transformer, zero-shot",
+        "publisher": "arXiv",
+        "title": "Zero-Shot Text-to-Image Generation",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2102.12092v2.pdf",
+        "year": "2021"
+    },
+    "Voleti2024SV3D": {
+        "abstract": "We present Stable Video 3D (SV3D) - a latent video diffusion model for high-resolution, image-to-multi-view generation of orbital videos around a 3D object. Recent work on 3D generation propose techniques to adapt 2D generative models for novel view synthesis (NVS) and 3D optimization. However, these methods have several disadvantages due to either limited views or inconsistent NVS, thereby affecting the performance of 3D object generation. In this work, we propose SV3D that adapts image-to-video diffusion model for novel multi-view synthesis and 3D generation, thereby leveraging the generalization and multi-view consistency of the video models, while further adding explicit camera control for NVS. We also propose improved 3D optimization techniques to use SV3D and its NVS outputs for image-to-3D generation. Extensive experimental results on multiple datasets with 2D and 3D metrics as well as user study demonstrate SV3D\u2019s state-of-the-art performance on NVS as well as 3D reconstruction compared to prior works.",
+        "author": "Voleti, Vikram and Yao, Chun-Han and Boss, Mark and Letts, Adam and Pankratz, David and Tochilkin, Dmitry and Laforte, Christian and Rombach, Robin and Jampani, Varun",
+        "journal": "arXiv preprint arXiv:2403.12008v1",
+        "keywords": "type:model, 3D_generation, multi-view_synthesis, latent_video_diffusion, novel_view_synthesis",
+        "publisher": "arXiv",
+        "title": "SV3D: Novel Multi-view Synthesis and 3D Generation from a Single Image using Latent Video Diffusion",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2403.12008v1.pdf",
+        "year": "2024"
+    },
+    "Xiao2024OmniGen": {
+        "abstract": "The emergence of Large Language Models (LLMs) has unified language generation tasks and revolutionized human-machine interaction. However, in the realm of image generation, a unified model capable of handling various tasks within a single framework remains largely unexplored. In this work, we introduce OmniGen, a new diffusion model for unified image generation. OmniGen is characterized by the following features: 1) Unification: OmniGen not only demonstrates text-to-image generation capabilities but also inherently supports various downstream tasks, such as image editing, subject-driven generation, and visual-conditional generation. 2) Simplicity: The architecture of OmniGen is highly simplified, eliminating the need for additional plugins. Moreover, compared to existing diffusion models, it is more user-friendly and can complete complex tasks end-to-end through instructions without the need for extra intermediate steps, greatly simplifying the image generation workflow. 3) Knowledge Transfer: Benefit from learning in a unified format, OmniGen effectively transfers knowledge across different tasks, manages unseen tasks and domains, and exhibits novel capabilities. We also explore the model\u2019s reasoning capabilities and potential applications of the chain-of-thought mechanism. This work represents the first attempt at a general-purpose image generation model, and we will release our resources at https://github.com/VectorSpaceLab/OmniGen to foster future advancements.",
+        "author": "Xiao, Shitao and Wang, Yueze and Zhou, Junjie and Yuan, Huaying and Xing, Xingrun and Yan, Ruiran and Li, Chaofan and Wang, Shuting and Huang, Tiejun and Liu, Zheng",
+        "doi": "arXiv:2409.11340v2",
+        "journal": "arXiv preprint arXiv:2409.11340v2",
+        "keywords": "type:model, image_generation, unified_model, diffusion_model, multi-modal",
+        "publisher": "arXiv",
+        "title": "OmniGen: Unified Image Generation",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2409.11340v2.pdf",
+        "year": "2024"
+    },
+    "Zhang2023Texttoimage": {
+        "abstract": "Diffusion models have demonstrated impressive performance in text-guided image generation. To leverage the knowledge of text-guided image generation models in image editing, current approaches either fine-tune the pre-trained models using the input image (e.g., Imagic) or incorporate structure information as additional constraints into the pre-trained models (e.g., ControlNet). However, fine-tuning large-scale diffusion models on a single image can lead to severe overfitting issues and lengthy inference time. The information leakage from pre-trained models makes it challenging to preserve the text-irrelevant content of the input image while generating new features guided by language descriptions. On the other hand, methods that incorporate structural guidance (e.g., edge maps, semantic maps, keypoints) as additional constraints face limitations in preserving other attributes of the original image, such as colors or textures. A straightforward way to incorporate the original image is to directly use it as an additional control. However, since image editing methods are typically trained on the image reconstruction task, the incorporation can lead to the identical mapping issue, where the model learns to output an image identical to the input, resulting in limited editing capabilities. To address these challenges, we propose a text-to-image editing model with Image Information Removal module (IIR) to selectively erase color-related and texture-related information from the original image, allowing us to better preserve the text-irrelevant content and avoid the identical mapping issue. We evaluate our model on three benchmark datasets: CUB, Outdoor Scenes, and COCO. Our approach achieves the best editability-fidelity trade-off, and our edited images are approximately 35% more preferred by annotators than the prior-arts on COCO.",
+        "author": "Zhang, Zhongping and Zheng, Jian and Fang, Jacob Zhiyuan and Plummer, Bryan A.",
+        "doi": "arXiv:2305.17489v1",
+        "journal": "arXiv preprint arXiv:2305.17489v1",
+        "keywords": "type:model, text-to-image_editing, diffusion_models, image_information_removal, editability_fidelity",
+        "publisher": "arXiv",
+        "title": "Text-to-image Editing by Image Information Removal",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2305.17489v1.pdf",
+        "year": "2023"
+    },
+    "Zheng2024LayoutDiffusion": {
+        "abstract": "Recently, diffusion models have achieved great success in image synthesis. However, when it comes to the layout-to-image generation where an image often has a complex scene of multiple objects, how to make strong control over both the global layout map and each detailed object remains a challenging task. In this paper, we propose a diffusion model named LayoutDiffusion that can obtain higher generation quality and greater controllability than the previous works. To overcome the difficult multimodal fusion of image and layout, we propose to construct a structural image patch with region information and transform the patched image into a special layout to fuse with the normal layout in a unified form. Moreover, Layout Fusion Module (LFM) and Object-aware Cross Attention (OaCA) are proposed to model the relationship among multiple objects and designed to be object-aware and position-sensitive, allowing for precisely controlling the spatial related information. Extensive experiments show that our LayoutDiffusion outperforms the previous SOTA methods on FID, CAS by relatively 46.35%, 26.70% on COCO-stuff and 44.29%, 41.82% on VG. Code is available at https://github.com/ZGCTroy/LayoutDiffusion.",
+        "author": "Zheng, Guangcong and Zhou, Xianpan and Li, Xuewei and Qi, Zhongang and Shan, Ying and Li, Xi",
+        "doi": "arXiv:2303.17189v2",
+        "journal": "arXiv preprint arXiv:2303.17189v2",
+        "keywords": "type:model, layout-to-image_generation, diffusion_model, multimodal_fusion, object_control",
+        "publisher": "arXiv",
+        "title": "LayoutDiffusion: Controllable Diffusion Model for Layout-to-image Generation",
+        "type": "article",
+        "url": "https://arxiv.org/pdf/2303.17189v2.pdf",
+        "year": "2024"
+    }
+};
